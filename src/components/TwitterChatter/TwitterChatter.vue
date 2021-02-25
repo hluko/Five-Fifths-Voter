@@ -20,7 +20,11 @@
         :overlay="loadingOverlay"
       ></cv-loading>
       <cv-list class="tweet__list" v-if="haveTweets">
-        <cv-list-item v-for="item in twitter_chatter.items" :key="item.tweet">
+        <cv-list-item
+          v-for="item in twitter_chatter.items"
+          :key="item.tweet"
+          :class="'tweet-border-' + item.sentiment"
+        >
           <span class="tweet-sentiment"> {{ item.sentiment }} </span>
           <p>{{ item.tweet }}</p>
         </cv-list-item>
