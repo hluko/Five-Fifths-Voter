@@ -11,9 +11,20 @@
         @filter="actionFilter"
       >
       </cv-combo-box>
+
       <div class="wrapper wrapper--button">
         <cv-button @click="checkChatter">Check</cv-button>
+
+        <div class="tweet-legend-positive"></div>
+        <p>Positive</p>
+
+        <div class="tweet-legend-neutral"></div>
+        <p>Neutral</p>
+
+        <div class="tweet-legend-negative"></div>
+        <p>Negative</p>
       </div>
+
       <cv-loading
         v-if="loadingChatter"
         :active="loadingChatter"
