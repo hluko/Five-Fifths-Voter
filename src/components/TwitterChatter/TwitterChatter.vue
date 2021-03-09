@@ -14,15 +14,16 @@
 
       <div class="wrapper wrapper--button">
         <cv-button @click="checkChatter">Check</cv-button>
+        <template v-if="haveTweets">
+          <div class="tweet-legend-sentiment tweet-legend-sentiment--positive"></div>
+          <p>positive</p>
 
-        <div class="tweet-legend-positive"></div>
-        <p>Positive</p>
+          <div class="tweet-legend-sentiment tweet-legend-sentiment--neutral"></div>
+          <p>neutral</p>
 
-        <div class="tweet-legend-neutral"></div>
-        <p>Neutral</p>
-
-        <div class="tweet-legend-negative"></div>
-        <p>Negative</p>
+          <div class="tweet-legend-sentiment tweet-legend-sentiment--negative"></div>
+          <p>negative</p>
+        </template>
       </div>
 
       <cv-loading
