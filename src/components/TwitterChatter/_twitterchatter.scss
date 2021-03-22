@@ -1,9 +1,24 @@
+@import 'carbon-components/scss/globals/scss/vars.scss';
+
 .tweet__list.bx--list--unordered {
   height: auto;
   overflow: auto;
 
   @media (min-width: 672px) {
     max-height: 216px;
+  }
+
+  &.tweet__list::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &.tweet__list::-webkit-scrollbar-thumb {
+    background: $inverse-02;
+    border-radius: 5px;
+  }
+
+  &.tweet__list::-webkit-scrollbar-thumb:hover {
+    background: $inverse-hover-ui;
   }
 }
 
